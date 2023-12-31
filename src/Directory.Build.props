@@ -1,0 +1,17 @@
+<Project>
+    <PropertyGroup>
+        <RootNamespace>AngelOfDev</RootNamespace>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <AnalysisLevel>latest</AnalysisLevel>
+        <AnalysisMode>All</AnalysisMode>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <!--
+            CA2225 - Provide a method named 'ToXXX' as an alternate for operator op_Implicit
+                     Disabled to reduce maintenance overhead and keep API smaller. Operators alone should be good enough.
+        -->
+        <NoWarn>CA2225</NoWarn>
+    </PropertyGroup>
+</Project>

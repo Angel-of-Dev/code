@@ -1,0 +1,40 @@
+<Project>
+    <PropertyGroup>
+        <RootNamespace>AngelOfDev</RootNamespace>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <AnalysisLevel>latest</AnalysisLevel>
+        <AnalysisMode>All</AnalysisMode>
+        <!--        
+            CA1034 - Do not nest types.
+                     Disabled because nesting is used to group some unit tests.
+            CA1707 - Remove underscores from member name.
+                     Disabled because underscores are used in names of unit test methods.
+            CA1720 - Identifiers should not contain type names.
+                     Disabled because type names are sometimes useful in identifiers in context of testing.
+            CA5394 - Do not use insecure randomness.
+                     Disabled because this project does not need secure randomness.
+        -->
+        <NoWarn>CA1034, CA1707, CA1720, CA5394</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Bogus" Version="35.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0"/>
+        <PackageReference Include="TestableIO.System.IO.Abstractions" Version="19.2.69" />
+        <PackageReference Include="TestableIO.System.IO.Abstractions.Wrappers" Version="19.2.69" />
+        <PackageReference Include="xunit" Version="2.4.2"/>
+        <PackageReference Include="Xunit.Extensions.Logging" Version="1.1.0" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="coverlet.collector" Version="6.0.0">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+# Exclude JetBrains Rider configuration.
+.idea
+
+# Exclude build output
+**/obj/
+**/bin/
